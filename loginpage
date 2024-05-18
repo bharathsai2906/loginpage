@@ -1,0 +1,59 @@
+HTML....
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mail.css"/>
+    <title>Login Page</title>
+    
+</head>
+<body>
+
+<div class="container ">
+    <form id="loginForm">
+        <label for="username">User name:</label>
+        <input type="text" id="username" name="username" required>
+
+        <div class="password">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+        <div class="button">
+
+        <input class="submit" type="submit" value="Sign In">
+    </form>
+</div>
+    <script src="mail.js"></script>
+</div>
+
+</body>
+</html>
+
+.CSS...
+
+.container{
+    text-align: center;
+
+}
+
+.JS...
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    
+    if (username === "bharath@gmail.com" && password === "0987654321") {
+        alert("Welcome, Bharath! You are logedin");
+        
+    } 
+     else {
+        alert("Invalid username or password!");
+        
+    }
+});
